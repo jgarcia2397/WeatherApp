@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.josh2.weatherapp.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@android:color/holo_orange_light" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_below="@+id/button"
+            app:srcCompat="@drawable/fallweather" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:text="Enter a city"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:ems="10"
+            android:hint="City name..."
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true"
+            android:onClick="weather"
+            android:text="What's the weather?"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="97dp" />
+
+        <TextView
+            android:id="@+id/weatherTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="TextView"
+            android:textSize="25sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
